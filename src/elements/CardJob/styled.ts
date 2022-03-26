@@ -12,7 +12,7 @@ export const CardWrapper = styled.section`
     flex-direction: row;
     align-items: center;
     width: 100%;
-    height: 140px;
+    height: 15rem;
 
     padding: ${theme.spacings.small};
 
@@ -46,19 +46,28 @@ export const CardWrapper = styled.section`
     small {
       font-size: ${theme.font.sizes.xxsmall};
       opacity: 0.6;
-      width: 40%;
+      width: 100%;
 
       @media (max-width: 1200px) {
         width: 100%;
       }
 
-      a {
-        color: ${theme.colors.tertiary};
-        cursor: pointer;
+      & > ul {
+        display: flex;
+        flex-direction: column;
+
+        margin-top: ${theme.spacings.xsmall};
+
+        gap: ${theme.spacings.xxsmall};
+
+        a {
+          color: ${theme.colors.tertiary};
+          cursor: pointer;
+        }
       }
     }
 
-    img {
+    & > span > img {
       max-width: 700px;
       height: auto;
       transform: translateY(-80px);

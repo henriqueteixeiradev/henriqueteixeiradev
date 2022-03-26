@@ -12,8 +12,10 @@ export const AboutUs = () => {
           <h2>Sobre Mim</h2>
           <p>
             Meu nome é Henrique Teixeira tenho 33 anos, nasci em Guarulhos - SP.
-            Venho de uma família nordestina. <br />
-            Trabalhei dos 15 aos 31 anos como Técnico em Segurança Eletrônica.
+            <br />
+            Venho de uma família nordestina. Trabalhei dos 15 aos 31 anos
+            <br />
+            como Técnico em Segurança Eletrônica.
           </p>
         </S.LeftWrapper>
 

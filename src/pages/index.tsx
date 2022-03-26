@@ -2,22 +2,42 @@ import React from 'react'
 
 import AboutUs from 'components/AboutUs'
 import Header from 'components/Header'
-import HeadLine from 'components/HeadLine'
+import Developer from 'components/Developer'
 import Technologies from 'components/Technologies'
-import SectionJobs from 'components/SectionJobs'
-import SectionCertificates from 'components/SectionCertificates'
+import Jobs from 'components/Jobs'
+import Certificates from 'components/Certificates'
 import Footer from 'components/Footer'
 
-const Index = () => (
+// Request
+import { GetStaticProps } from 'next'
+import client from 'graphql/clients'
+import { GET_TECNOLOGIES } from 'graphql/get-tecnologies'
+import { GET_JOBS } from 'graphql/get-jobs'
+
+const Index = ({ technologys, jobs }) => (
   <>
     <Header />
-    <HeadLine />
-    <Technologies />
+    <Developer />
+    <Technologies technologys={technologys} />
     <AboutUs />
-    <SectionJobs />
-    <SectionCertificates />
+    <Jobs jobs={jobs} />
+    <Certificates />
     <Footer />
   </>
 )
 
 export default Index
+
+export const getStaticProps: GetStaticProps = async () => {
+  const { technologys } = await client.request(GET_TECNOLOGIES)
+  const { jobs } = await client.request(GET_JOBS)
+
+  return {
+    props: {
+      technologys,
+      jobs
+    },
+
+    revalidate: 60 * 60
+  }
+}

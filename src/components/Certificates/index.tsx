@@ -4,7 +4,7 @@ import * as S from './styled'
 
 import { listIconsTecnologies } from 'mock/listIconsTecnologies'
 
-export const SectionCertificates = () => {
+export const Certificates = () => {
   return (
     <S.Section>
       <S.Content>
@@ -122,4 +122,4 @@ export const SectionCertificates = () => {
   )
 }
 
-export default SectionCertificates
+export default Certificates

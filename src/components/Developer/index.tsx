@@ -4,7 +4,7 @@ import * as S from './styled'
 
 import { tableName } from 'mock/tableName'
 
-export const HeadLine = () => {
+export const Developer = () => {
   return (
     <S.Section>
       <S.Content>
@@ -32,4 +32,4 @@ export const HeadLine = () => {
   )
 }
 
-export default HeadLine
+export default Developer

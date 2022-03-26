@@ -5,7 +5,18 @@ import * as S from './styled'
 
 import { listIconsTecnologies } from 'mock/listIconsTecnologies'
 
-export const Technologies = () => {
+type TechnologiesTypes = {
+  label: string
+  icon: {
+    url: string
+  }
+}
+
+interface TechnologiesProps {
+  technologys: TechnologiesTypes[]
+}
+
+export const Technologies = ({ technologys }: TechnologiesProps) => {
   return (
     <S.Section>
       <S.Content>
@@ -17,9 +28,9 @@ export const Technologies = () => {
           </p>
 
           <ul>
-            {listIconsTecnologies.map((item) => (
+            {technologys.map((item) => (
               <li key={item.label}>
-                <img src={item.icon} alt="Ícone HTML5" />
+                <img src={item.icon.url} alt="Ícone HTML5" />
                 {item.label}
               </li>
             ))}

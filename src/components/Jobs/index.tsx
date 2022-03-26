@@ -2,20 +2,19 @@ import React from 'react'
 
 import * as S from './styled'
 
-import { listIconsTecnologies } from 'mock/listIconsTecnologies'
-import CardJob from 'elements/CardJob'
+import CardJob, { CardJobProps } from 'elements/CardJob'
 
-export const SectionJobs = () => {
+export const Jobs = ({ jobs }: CardJobProps) => {
   return (
     <S.Section>
       <S.Content>
         <S.TitleWrapper>
           <h2>Jobs</h2>
         </S.TitleWrapper>
-        <CardJob />
+        <CardJob jobs={jobs} />
       </S.Content>
     </S.Section>
   )
 }
 
-export default SectionJobs
+export default Jobs
