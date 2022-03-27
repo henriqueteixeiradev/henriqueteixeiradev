@@ -20,28 +20,28 @@ const App = ({ Component, pageProps }: AppProps) => {
   return (
     <ThemeProvider theme={theme}>
       <Head>
-        <meta name="theme-color" content="#252a36" />
+        <meta name="theme-color" content="#000000" />
         <link rel="shortcut icon" href="/img/icon-512.png" />
         <link rel="apple-touch-icon" href="/img/icon-512.png" />
       </Head>
       <NextSeo
-        title="Título"
-        description="Descrição"
-        canonical="https://site.com.br/"
+        title="Henrique Teixeira Dev"
+        description="Desenvoldevor Front-End ReactJS"
+        canonical="https://henriqueteixeira.dev.br/"
         openGraph={{
-          url: 'https://site.com.br/',
-          title: 'Título',
-          description: 'Descrição',
+          url: 'https://henriqueteixeira.dev.br/',
+          title: 'Henrique Teixeira Dev',
+          description: 'Desenvoldevor Front-End ReactJS',
           images: [
             {
-              url: 'https://res.cloudinary.com/bellmont-sistema/image/upload/v1612594246/thumbnail_undraw_content_team_b41f963811.png'
+              url: '/img/cover.png'
             }
           ],
           site_name: 'Título',
           locale: 'pt_BR'
         }}
         twitter={{
-          handle: '@bellmont_sistema',
+          handle: '@henriqueteixeira.dev',
           site: '@site',
           cardType: 'summary_large_image'
         }}
