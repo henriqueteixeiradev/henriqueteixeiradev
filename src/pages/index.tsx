@@ -36,6 +36,8 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       technologys,
       jobs
-    }
+    },
+
+    revalidate: 60
   }
 }
