@@ -1,3 +1,4 @@
+import { circuit } from 'components/animated'
 import styled, { css } from 'styled-components'
 
 export const Section = styled.section`
@@ -67,6 +68,7 @@ export const LeftWrapper = styled.div`
           0px 0px 14px 1px ${theme.colors.primary},
           0px 0px 4px 1px ${theme.colors.secondary};
         border-radius: 8px;
+        animation: ${circuit} 9s linear infinite;
       }
     }
 

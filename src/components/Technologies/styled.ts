@@ -1,3 +1,4 @@
+import { circuit } from 'components/animated'
 import styled, { css } from 'styled-components'
 
 export const Section = styled.section`
@@ -44,7 +45,6 @@ export const TechnologiesWrapper = styled.div`
 
     h2 {
       font-size: ${theme.font.sizes.xlarge};
-
       @media (max-width: 768px) {
         font-size: ${theme.font.sizes.large};
       }
@@ -60,6 +60,8 @@ export const TechnologiesWrapper = styled.div`
           0px 0px 14px 1px ${theme.colors.primary},
           0px 0px 4px 1px ${theme.colors.secondary};
         border-radius: 8px;
+
+        animation: ${circuit} 5s linear infinite;
       }
     }
 

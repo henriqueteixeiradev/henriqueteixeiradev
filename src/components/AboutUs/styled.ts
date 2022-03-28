@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { animateSquareOne, animateSquareTwo, circuit } from 'components/animated'
 
 export const Section = styled.section`
   ${({ theme }) => css`
@@ -63,6 +64,7 @@ export const LeftWrapper = styled.div`
           0px 0px 14px 1px ${theme.colors.secondary},
           0px 0px 4px 1px ${theme.colors.primary};
         border-radius: ${theme.border.radius};
+        animation: ${circuit} 8s linear infinite;
       }
     }
 
@@ -79,6 +81,14 @@ export const CardWrapper = styled.div`
     justify-content: center;
 
     width: 50%;
+
+    & > svg #squareOne {
+      animation: ${animateSquareOne} 5s alternate-reverse infinite;
+    }
+
+    & > svg #squareTwo {
+      animation: ${animateSquareTwo} 5s alternate-reverse infinite;
+    }
 
     img {
       width: 128px;

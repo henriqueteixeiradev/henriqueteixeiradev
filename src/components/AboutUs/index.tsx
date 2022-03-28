@@ -3,6 +3,7 @@ import React from 'react'
 import * as S from './styled'
 
 import { listIconsTecnologies } from 'mock/listIconsTecnologies'
+import { Square } from 'icons'
 
 export const AboutUs = () => {
   return (
@@ -20,7 +21,7 @@ export const AboutUs = () => {
         </S.LeftWrapper>
 
         <S.CardWrapper>
-          <img src="/img/icon_squares.svg" alt="Ícones Quadrados Azuis" />
+          {Square}
           <p>
             Quando começou a pandemia em 2020 fiquei desempregado e resolvi
             mudar de profissão, como já tinha contato com tecnologia escolhi
