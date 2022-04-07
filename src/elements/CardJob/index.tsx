@@ -50,12 +50,14 @@ export const CardJob = ({ jobs }: CardJobProps) => {
             </ul>
           </small>
 
-          <Image
-            src={item.image.url}
-            alt="Mockup Simulação Desktop e Mobile"
-            width={item.image.width}
-            height={item.image.height}
-          />
+          <S.ImageWrapper>
+            <Image
+              src={item.image.url}
+              alt="Mockup Simulação Desktop e Mobile"
+              width={item.image.width}
+              height={item.image.height}
+            />
+          </S.ImageWrapper>
         </S.CardWrapper>
       ))}
     </S.Wrapper>

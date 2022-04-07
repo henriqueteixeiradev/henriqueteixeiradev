@@ -67,26 +67,6 @@ export const CardWrapper = styled.section`
       }
     }
 
-    & > span > img {
-      max-width: 700px;
-      height: auto;
-      transform: translateY(-80px);
-
-      @media (max-width: 1200px) {
-        max-width: 500px;
-        transform: translateY(-40px);
-      }
-
-      @media (max-width: 768px) {
-        transform: translateY(-50px);
-      }
-
-      @media (max-width: 525px) {
-        max-width: 350px;
-        transform: translateY(-20px);
-      }
-    }
-
     &:nth-child(2n + 0) {
       flex-direction: row-reverse;
 
@@ -97,6 +77,28 @@ export const CardWrapper = styled.section`
 
     &:last-child {
       margin-bottom: 0;
+    }
+  `}
+`
+
+export const ImageWrapper = styled.div`
+  ${({ theme }) => css`
+    max-width: 700px;
+    height: auto;
+    transform: translateY(-80px);
+
+    @media (max-width: 1200px) {
+      max-width: 500px;
+      transform: translateY(-40px);
+    }
+
+    @media (max-width: 768px) {
+      transform: translateY(-50px);
+    }
+
+    @media (max-width: 525px) {
+      max-width: 350px;
+      transform: translateY(-20px);
     }
   `}
 `
