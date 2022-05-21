@@ -53,8 +53,8 @@ export const Square = (
         y2="95.909"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stopColor="#0095FF" />
-        <stop offset="1" stopColor="#0095FF" stopOpacity="0" />
+        <stop stop-color="#0095FF" />
+        <stop offset="1" stop-color="#0095FF" stop-opacity="0" />
       </linearGradient>
       <linearGradient
         id="paint1_linear_46_17"
@@ -64,8 +64,8 @@ export const Square = (
         y2="128.938"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stopColor="#0095FF" />
-        <stop offset="1" stopColor="#0095FF" stopOpacity="0" />
+        <stop stop-color="#0095FF" />
+        <stop offset="1" stop-color="#0095FF" stop-opacity="0" />
       </linearGradient>
     </defs>
   </svg>
