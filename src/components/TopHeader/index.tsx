@@ -14,8 +14,6 @@ export const TopHeader = ({ toggleTheme }: DarkLightModeProps) => {
     <S.Section>
       {AssIcon}
 
-      <DarkAndLightButton toggleTheme={toggleTheme} />
-
       <SocialIcons />
     </S.Section>
   )

@@ -28,7 +28,7 @@ export const Content = styled.div`
     max-width: 1200px;
     margin: 0 auto;
 
-    gap: ${theme.spacings.xsmall};
+    gap: ${theme.spacings.large};
 
     @media (max-width: 1200px) {
       padding: 0 ${theme.spacings.xsmall};

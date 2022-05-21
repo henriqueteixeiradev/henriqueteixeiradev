@@ -2,6 +2,9 @@ import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.section`
   ${({ theme }) => css`
+    display: flex;
+    flex-direction: column;
+    gap: 15rem;
     width: 100%;
   `}
 `
@@ -58,7 +61,8 @@ export const CardWrapper = styled.section`
 
         margin-top: ${theme.spacings.xsmall};
 
-        gap: ${theme.spacings.xxsmall};
+        gap: ${theme.spacings.small};
+        margin-top: 5rem;
 
         a {
           color: ${theme.colors.tertiary};
