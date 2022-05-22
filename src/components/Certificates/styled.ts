@@ -13,8 +13,10 @@ export const Section = styled.section`
 
     padding: ${theme.spacings.large} 0;
 
+    margin-top: 5rem;
+
     @media (max-width: 768px) {
-      margin-top: ${theme.spacings.xlarge};
+      margin-top: ${theme.spacings.xxlarge};
     }
   `}
 `

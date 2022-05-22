@@ -6,6 +6,10 @@ export const Wrapper = styled.section`
     flex-direction: column;
     gap: 15rem;
     width: 100%;
+
+    @media (max-width: 640px) {
+      gap: 0rem;
+    }
   `}
 `
 
@@ -44,6 +48,11 @@ export const CardWrapper = styled.section`
       margin-bottom: calc(
         ${theme.spacings.xxlarge} + ${theme.spacings.xxlarge}
       );
+    }
+
+    @media (max-width: 525px) {
+      flex-direction: column;
+      margin-bottom: ${theme.spacings.xxlarge};
     }
 
     small {
@@ -97,12 +106,16 @@ export const ImageWrapper = styled.div`
     }
 
     @media (max-width: 768px) {
-      transform: translateY(-50px);
+      transform: translate(80px, -80px);
     }
 
     @media (max-width: 525px) {
-      max-width: 350px;
-      transform: translateY(-20px);
+      max-width: 250px;
+      transform: translate(80px, -80px);
+    }
+
+    @media (max-width: 525px) {
+      max-width: 150px;
     }
   `}
 `
