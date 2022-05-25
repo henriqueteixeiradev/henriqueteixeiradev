@@ -8,7 +8,7 @@ const AnimateLetter = keyframes`
         opacity: 0.6;
       }
       5.1%,10%,15.2%,25%,45.1%,70%,90.1%,95%
-      
+
       {
         opacity: 1;
         text-shadow:  0 0 10px,
@@ -27,6 +27,18 @@ export const Section = styled.section`
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+
+    @media (max-width: 1080px) {
+      margin-top: -100px;
+    }
+
+    @media (max-width: 980px) {
+      margin-top: -150px;
+    }
+
+    @media (max-width: 800px) {
+      margin-top: -200px;
+    }
   `}
 `
 export const Content = styled.div`

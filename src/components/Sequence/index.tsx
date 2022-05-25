@@ -1,6 +1,35 @@
+import TopHeader from 'components/TopHeader'
 import React, { useEffect, useState } from 'react'
 
 import * as S from './styled'
+
+const AsyncImage = (props: any) => {
+  const [loadProps, setLoadProps] = React.useState(null)
+
+  useEffect(() => {
+    setLoadProps(null)
+    if (props.src) {
+      const handleLoadScreen = () => {
+        setLoadProps(props.src)
+      }
+      const image = new Image()
+      image.addEventListener('load', handleLoadScreen)
+      image.src = props.src
+      return () => {
+        image.removeEventListener('load', handleLoadScreen)
+      }
+    }
+  }, [props.src])
+
+  if (loadProps === props.src) {
+    if (loadProps === null) {
+      return <div>Carregando</div>
+    } else {
+      return <img {...props} />
+    }
+  }
+  return null
+}
 
 export const Sequence = () => {
   const [image, setImage] = useState(0)
@@ -8,9 +37,8 @@ export const Sequence = () => {
 
   function trackScrollPosition() {
     const position = window.scrollY
-    const number = Math.min(Math.floor(position / 30) + 1, 150)
+    const number = Math.min(Math.floor(position / 30) + 1, 60)
     setImage(number)
-    console.log(number)
   }
 
   if (typeof window !== 'undefined') {
@@ -24,32 +52,30 @@ export const Sequence = () => {
       myArray[i] = `/sequence/${i}.jpg`
     }
     setImagesArray(myArray)
-
-    console.log(myArray)
   }, [])
 
+  const screenWidht = window.innerWidth
+
   return (
-    <S.Section>
-      {image <= imagesArray.length - 1 ? (
-        imagesArray.map((element, i) => (
+    <>
+      <S.Section>
+        {imagesArray.map((element, i) => (
           <S.Content
             key={i}
             onScroll={trackScrollPosition}
             style={{
-              backgroundImage: `url('${element}')`,
-              display: `${image !== i ? 'none' : 'block'}`
+              display: `${image !== i ? 'none' : 'flex'}`
             }}
-          />
-        ))
-      ) : (
-        <S.ContentFixed
-          onScroll={trackScrollPosition}
-          style={{
-            backgroundImage: `url('/sequence/69.jpg')`,
-            display: `block'}`
-          }}
-        />
-      )}
-    </S.Section>
+          >
+            <TopHeader />
+            {screenWidht > 768 ? (
+              <AsyncImage key={i} src={element} />
+            ) : (
+              <img src="/sequence/69.jpg" alt="Imagem" />
+            )}
+          </S.Content>
+        ))}
+      </S.Section>
+    </>
   )
 }

@@ -6,7 +6,6 @@ import { ThemeProvider, DefaultTheme } from 'styled-components'
 
 import { dark, light } from 'styles/theme'
 import GlobalStyle from 'styles/global.styles'
-import TopHeader from 'components/TopHeader'
 
 import usePersistedState from 'hook/usePersistedState'
 
@@ -47,7 +46,6 @@ const App = ({ Component, pageProps }: AppProps) => {
         }}
       />
       <GlobalStyle />
-      <TopHeader toggleTheme={toggleTheme} />
       <Component {...pageProps} />
     </ThemeProvider>
   )

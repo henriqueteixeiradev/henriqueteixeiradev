@@ -109,6 +109,11 @@ export const ImageWrapper = styled.div`
       transform: translate(80px, -80px);
     }
 
+    @media (max-width: 670px) {
+      max-width: 400px;
+      transform: translate(50px, -80px);
+    }
+
     @media (max-width: 525px) {
       max-width: 250px;
       transform: translate(80px, -80px);
