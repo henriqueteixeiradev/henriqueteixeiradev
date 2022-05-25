@@ -1,17 +1,14 @@
+import { Sequence } from 'components/Sequence'
 import React from 'react'
 
-import * as S from './styled'
-
 export const Header = () => {
-  return (
-    <S.Section>
-      <S.Content>
-        <video autoPlay loop muted id="video">
-          <source src="/img/video.mp4" type="video/mp4" />
-        </video>
-      </S.Content>
-    </S.Section>
-  )
+  return <Sequence />
 }
 
 export default Header
+
+// <S.Content>
+// <video autoPlay loop muted id="video">
+//   <source src="/img/video.mp4" type="video/mp4" />
+// </video>
+// </S.Content>

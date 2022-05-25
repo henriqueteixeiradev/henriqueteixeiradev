@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 
 export const Section = styled.section`
   ${({ theme }) => css`
-    display: flex;
+    display: none;
     justify-content: space-between;
     align-items: center;
 
