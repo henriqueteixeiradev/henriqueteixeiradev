@@ -54,27 +54,27 @@ export const Sequence = () => {
     setImagesArray(myArray)
   }, [])
 
-  const screenWidht = window.innerWidth
-
   return (
     <>
       <S.Section>
-        {imagesArray.map((element, i) => (
-          <S.Content
-            key={i}
-            onScroll={trackScrollPosition}
-            style={{
-              display: `${image !== i ? 'none' : 'flex'}`
-            }}
-          >
-            <TopHeader />
-            {screenWidht > 768 ? (
+        <S.ImageByImageWrapper>
+          {imagesArray.map((element, i) => (
+            <S.ImageByImage
+              key={i}
+              onScroll={trackScrollPosition}
+              style={{
+                display: `${image !== i ? 'none' : 'block'}`
+              }}
+            >
+              <TopHeader />
               <AsyncImage key={i} src={element} />
-            ) : (
-              <img src="/sequence/69.jpg" alt="Imagem" />
-            )}
-          </S.Content>
-        ))}
+            </S.ImageByImage>
+          ))}
+        </S.ImageByImageWrapper>
+
+        <S.FixedImage>
+          <img src="/sequence/69.jpg" />
+        </S.FixedImage>
       </S.Section>
     </>
   )

@@ -31,13 +31,8 @@ export const Section = styled.section`
     @media (max-width: 1080px) {
       margin-top: -100px;
     }
-
-    @media (max-width: 980px) {
-      margin-top: -150px;
-    }
-
-    @media (max-width: 800px) {
-      margin-top: -200px;
+    @media (max-width: 768px) {
+      margin-top: -50px;
     }
   `}
 `
