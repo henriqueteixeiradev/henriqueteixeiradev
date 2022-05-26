@@ -1,7 +1,9 @@
 import styled, { css } from 'styled-components'
 
 export const Section = styled.section`
-  ${({ theme }) => css``}
+  ${({ theme }) => css`
+    width: 100%;
+  `}
 `
 
 export const ImageByImageWrapper = styled.div`
@@ -9,7 +11,8 @@ export const ImageByImageWrapper = styled.div`
     display: flex;
     position: relative;
     width: 100%;
-    height: 2300px;
+    height: 2200px;
+    justify-content: center;
 
     @media (max-width: 768px) {
       display: none;

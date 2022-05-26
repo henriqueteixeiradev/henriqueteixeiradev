@@ -1,7 +1,6 @@
 import React from 'react'
 
 import AboutUs from 'components/AboutUs'
-import Header from 'components/Header'
 import Developer from 'components/Developer'
 import Technologies from 'components/Technologies'
 import Jobs from 'components/Jobs'
@@ -13,10 +12,11 @@ import { GetStaticProps } from 'next'
 import client from 'graphql/clients'
 import { GET_TECNOLOGIES } from 'graphql/get-tecnologies'
 import { GET_JOBS } from 'graphql/get-jobs'
+import { Sequence } from 'components/Sequence'
 
 const Index = ({ technologys, jobs }) => (
   <>
-    <Header />
+    <Sequence />
     <Developer />
     <Technologies technologys={technologys} />
     <AboutUs />

@@ -9,9 +9,11 @@ import { AssIcon } from 'icons'
 export const TopHeader = () => {
   return (
     <S.Section>
-      {AssIcon}
+      <S.Content>
+        {AssIcon}
 
-      <SocialIcons />
+        <SocialIcons />
+      </S.Content>
     </S.Section>
   )
 }

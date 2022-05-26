@@ -2,6 +2,17 @@ import styled, { css } from 'styled-components'
 
 export const Section = styled.section`
   ${({ theme }) => css`
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+  `}
+`
+
+export const Content = styled.section`
+  ${({ theme }) => css`
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,9 +22,6 @@ export const Section = styled.section`
     height: 100px;
 
     margin: 0 auto;
-
-    position: absolute;
-    top: 0;
 
     > svg {
       width: 190px;

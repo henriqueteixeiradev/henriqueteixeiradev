@@ -22,6 +22,8 @@ export const Section = styled.section`
   ${({ theme }) => css`
     display: flex;
     width: 100%;
+    flex-direction: column;
+    align-items: center;
 
     background-image: url('/img/bg_image.svg');
     background-repeat: no-repeat;
@@ -30,9 +32,6 @@ export const Section = styled.section`
 
     @media (max-width: 1080px) {
       margin-top: -100px;
-    }
-    @media (max-width: 768px) {
-      margin-top: -50px;
     }
   `}
 `
