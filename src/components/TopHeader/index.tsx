@@ -11,7 +11,7 @@ export const TopHeader = () => {
     <S.Section>
       <S.Content>
         {AssIcon}
-
+        <img src="/img/scroll-down.gif" width={60} alt="Imagem scroll down" />
         <SocialIcons />
       </S.Content>
     </S.Section>
