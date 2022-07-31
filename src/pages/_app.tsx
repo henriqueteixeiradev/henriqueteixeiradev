@@ -3,11 +3,13 @@ import Head from 'next/head'
 import { NextSeo } from 'next-seo'
 import { AppProps } from 'next/app'
 import { ThemeProvider, DefaultTheme } from 'styled-components'
+import NextNProgress from 'nextjs-progressbar'
 
 import { dark, light } from 'styles/theme'
 import GlobalStyle from 'styles/global.styles'
 
 import usePersistedState from 'hook/usePersistedState'
+import { useRouter } from 'next/router'
 
 const App = ({ Component, pageProps }: AppProps) => {
   const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', dark)
@@ -46,6 +48,13 @@ const App = ({ Component, pageProps }: AppProps) => {
         }}
       />
       <GlobalStyle />
+      <NextNProgress
+        color="#29D"
+        startPosition={0.3}
+        stopDelayMs={200}
+        height={3}
+        showOnShallow={true}
+      />
       <Component {...pageProps} />
     </ThemeProvider>
   )

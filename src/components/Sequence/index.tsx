@@ -28,27 +28,25 @@ export const Sequence = () => {
   }, [])
 
   return (
-    <>
-      <S.Section>
-        <S.ImageByImageWrapper>
-          {imagesArray.map((element, i) => (
-            <S.ImageByImage
-              key={i}
-              onScroll={trackScrollPosition}
-              style={{
-                display: `${image !== i ? 'none' : 'block'}`
-              }}
-            >
-              <TopHeader />
-              <AsyncImage key={i} src={element} />
-            </S.ImageByImage>
-          ))}
-        </S.ImageByImageWrapper>
+    <S.Section>
+      <S.ImageByImageWrapper>
+        {imagesArray.map((element, i) => (
+          <S.ImageByImage
+            key={i}
+            onScroll={trackScrollPosition}
+            style={{
+              display: `${image !== i ? 'none' : 'block'}`
+            }}
+          >
+            <TopHeader />
+            <AsyncImage key={i} src={element} />
+          </S.ImageByImage>
+        ))}
+      </S.ImageByImageWrapper>
 
-        <S.FixedImage>
-          <img src="/sequence/69.jpg" />
-        </S.FixedImage>
-      </S.Section>
-    </>
+      <S.FixedImage>
+        <img src="/sequence/69.jpg" />
+      </S.FixedImage>
+    </S.Section>
   )
 }
