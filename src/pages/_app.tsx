@@ -9,7 +9,6 @@ import { dark, light } from 'styles/theme'
 import GlobalStyle from 'styles/global.styles'
 
 import usePersistedState from 'hook/usePersistedState'
-import { useRouter } from 'next/router'
 
 const App = ({ Component, pageProps }: AppProps) => {
   const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', dark)
