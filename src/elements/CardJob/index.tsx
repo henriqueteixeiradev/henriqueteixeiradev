@@ -56,6 +56,8 @@ export const CardJob = ({ jobs }: CardJobProps) => {
               alt="Mockup Simulação Desktop e Mobile"
               width={item.image.width}
               height={item.image.height}
+              quality={100}
+              priority={true}
             />
           </S.ImageWrapper>
         </S.CardWrapper>

@@ -4,7 +4,6 @@ import AboutUs from 'components/AboutUs'
 import Developer from 'components/Developer'
 import Technologies from 'components/Technologies'
 import Jobs from 'components/Jobs'
-import Certificates from 'components/Certificates'
 import Footer from 'components/Footer'
 
 // Request
@@ -21,7 +20,6 @@ const Index = ({ technologys, jobs }) => (
     <Technologies technologys={technologys} />
     <AboutUs />
     <Jobs jobs={jobs} />
-    <Certificates />
     <Footer />
   </>
 )
