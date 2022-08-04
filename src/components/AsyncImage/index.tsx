@@ -1,3 +1,4 @@
+import AboutUs from 'components/AboutUs'
 import React, { useEffect, useState } from 'react'
 export const AsyncImage = (props: any) => {
   const [loadProps, setLoadProps] = useState(null)
@@ -18,11 +19,7 @@ export const AsyncImage = (props: any) => {
   }, [props.src])
 
   if (loadProps === props.src) {
-    if (loadProps === null) {
-      return <div>Carregando......</div>
-    } else {
-      return <img {...props} />
-    }
+    return <img {...props} />
   }
   return null
 }
