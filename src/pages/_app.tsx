@@ -61,7 +61,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         height={3}
         showOnShallow={true}
       />
-      {!loading ? <Component {...pageProps} /> : <div>eita porraa</div>}
+      {!loading ? <Component {...pageProps} /> : <div>Carregando...</div>}
     </ThemeProvider>
   )
 }
