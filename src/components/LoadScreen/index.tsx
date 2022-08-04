@@ -5,7 +5,7 @@ import * as S from './styled'
 export function LoadScreen() {
   return (
     <S.Section>
-      <div>Carregando </div>
+      <div className="load" />
     </S.Section>
   )
 }
