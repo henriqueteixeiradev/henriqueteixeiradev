@@ -12,13 +12,6 @@ import usePersistedState from 'hook/usePersistedState'
 
 const App = ({ Component, pageProps }: AppProps) => {
   const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', dark)
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    window.addEventListener('load', () => {
-      setLoading(false)
-    })
-  })
 
   const toggleTheme = () => {
     setTheme(theme.title === 'light' ? dark : light)
@@ -61,7 +54,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         height={3}
         showOnShallow={true}
       />
-      {!loading ? <Component {...pageProps} /> : <div>Carregando...</div>}
+      <Component {...pageProps} />
     </ThemeProvider>
   )
 }

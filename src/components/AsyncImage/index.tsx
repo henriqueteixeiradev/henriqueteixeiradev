@@ -1,4 +1,4 @@
-import AboutUs from 'components/AboutUs'
+import { LoadScreen } from 'components/LoadScreen'
 import React, { useEffect, useState } from 'react'
 export const AsyncImage = (props: any) => {
   const [loadProps, setLoadProps] = useState(null)
@@ -21,5 +21,5 @@ export const AsyncImage = (props: any) => {
   if (loadProps === props.src) {
     return <img {...props} />
   }
-  return null
+  return <LoadScreen />
 }
