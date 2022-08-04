@@ -27,6 +27,12 @@ export const Sequence = () => {
     setImagesArray(myArray)
   }, [])
 
+  useEffect(() => {
+    window.addEventListener('load', function (event) {
+      console.log('Todos os recursos terminaram o carregamento!')
+    })
+  }, [])
+
   return (
     <S.Section>
       <S.ImageByImageWrapper>

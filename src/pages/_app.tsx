@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
 import { NextSeo } from 'next-seo'
 import { AppProps } from 'next/app'
@@ -12,6 +12,13 @@ import usePersistedState from 'hook/usePersistedState'
 
 const App = ({ Component, pageProps }: AppProps) => {
   const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', dark)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    window.addEventListener('load', () => {
+      setLoading(false)
+    })
+  })
 
   const toggleTheme = () => {
     setTheme(theme.title === 'light' ? dark : light)
@@ -54,7 +61,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         height={3}
         showOnShallow={true}
       />
-      <Component {...pageProps} />
+      {!loading ? <Component {...pageProps} /> : <div>eita porraa</div>}
     </ThemeProvider>
   )
 }

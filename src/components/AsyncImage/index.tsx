@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-
 export const AsyncImage = (props: any) => {
   const [loadProps, setLoadProps] = useState(null)
 
@@ -20,7 +19,7 @@ export const AsyncImage = (props: any) => {
 
   if (loadProps === props.src) {
     if (loadProps === null) {
-      return <div>Carregando</div>
+      return <div>Carregando......</div>
     } else {
       return <img {...props} />
     }
