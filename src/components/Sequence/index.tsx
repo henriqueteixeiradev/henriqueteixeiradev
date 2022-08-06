@@ -51,7 +51,7 @@ export const Sequence = () => {
       </S.ImageByImageWrapper>
 
       <S.FixedImage>
-        <img src="/sequence/69.jpg" />
+        <img src="/sequence/68.jpg" />
       </S.FixedImage>
     </S.Section>
   )
