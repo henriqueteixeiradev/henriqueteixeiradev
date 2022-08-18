@@ -1,9 +1,9 @@
 import { LoadScreen } from 'components/LoadScreen'
-import React, { useEffect, useState } from 'react'
+import React, { useState, useLayoutEffect } from 'react'
 export const AsyncImage = (props: any) => {
   const [loadProps, setLoadProps] = useState(null)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setLoadProps(null)
     if (props.src) {
       const handleLoadScreen = () => {

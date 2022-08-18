@@ -1,6 +1,6 @@
 import { AsyncImage } from 'components/AsyncImage'
 import TopHeader from 'components/TopHeader'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useLayoutEffect } from 'react'
 
 import * as S from './styled'
 
@@ -18,19 +18,13 @@ export const Sequence = () => {
     window.addEventListener('scroll', trackScrollPosition)
   }
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     let myArray = new Array(70)
 
     for (let i = 0; i < myArray.length; i++) {
       myArray[i] = `/sequence/${i}.jpg`
     }
     setImagesArray(myArray)
-  }, [])
-
-  useEffect(() => {
-    window.addEventListener('load', function (event) {
-      console.log('Todos os recursos terminaram o carregamento!')
-    })
   }, [])
 
   return (
