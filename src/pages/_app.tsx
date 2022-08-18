@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
+import { ThemeProvider, DefaultTheme } from 'styled-components'
 import Head from 'next/head'
 import { NextSeo } from 'next-seo'
 import { AppProps } from 'next/app'
-import { ThemeProvider, DefaultTheme } from 'styled-components'
 import NextNProgress from 'nextjs-progressbar'
 
 import { dark, light } from 'styles/theme'
