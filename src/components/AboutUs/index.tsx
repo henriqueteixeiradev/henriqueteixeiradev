@@ -10,7 +10,7 @@ export const AboutUs = () => {
     <S.Section>
       <S.Content>
         <S.LeftWrapper>
-          <h2>Sobre Mimm</h2>
+          <h2>Sobre Mim</h2>
           <p>
             Meu nome é Henrique Teixeira tenho 33 anos, nasci em Guarulhos - SP.
             <br />
